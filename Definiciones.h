@@ -1,6 +1,6 @@
 #ifndef DEFINICIONES_H_INCLUDED
 #define DEFINICIONES_H_INCLUDED
 
-
+void primeraPrueba();
 
 #endif // DEFINICIONES_H_INCLUDED
