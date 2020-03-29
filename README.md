@@ -3,12 +3,19 @@
 ## Un proyecto en Git se llama repositorio, este tendrá todos los archivos de cualquier formato. Cada uno tendra su propia rama en la que trabajar y una mas que será la rama master.
 
 
-### Para usar git
+### Para instalar git
+en consola de bash
 ```
--en consola de bash
 sudo apt install git-all
 git --version
+```
 
+
+### Para descargarse el proyecto
+en consola: ir hasta donde se quiera descargar - 
+copiar el https en el boton verde de la pagina
+```
+git clone https://github.com/eugenio-perdomo/LAB0-ProgAv.git
 ```
 
 
