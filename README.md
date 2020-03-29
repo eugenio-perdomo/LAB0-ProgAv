@@ -3,6 +3,15 @@
 ## Un proyecto en Git se llama repositorio, este tendrá todos los archivos de cualquier formato. Cada uno tendra su propia rama en la que trabajar y una mas que será la rama master.
 
 
+### Para usar git
+```
+-en consola de bash
+sudo apt install git-all
+git --version
+
+```
+
+
 ### Para subir algo a la rama de uno (Por ahora no usaremos este metodo): 
 ```
 -en la consola llegar hasta el la carpeta del proyecto
