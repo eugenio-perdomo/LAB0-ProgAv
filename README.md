@@ -3,6 +3,9 @@
 ## Un proyecto en Git se llama repositorio, este tendrá todos los archivos de cualquier formato. Cada uno tendra su propia rama en la que trabajar y una mas que será la rama master.
 
 
+## Mas Info https://github.com/joshnh/Git-Commands
+
+
 ### Para instalar git
 en consola de bash
 ```
