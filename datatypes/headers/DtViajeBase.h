@@ -1,20 +1,22 @@
-#ifndef DtViajeBase_h
-#define DtViajeBase_h
+#ifndef DTVIAJEBASE_H
+#define DTVIAJEBASE_H
 #include <iostream>
 #include "../headers/DtFecha.h"
 
 
 
 class DtViajeBase{
-	private:
+
+	protected:
+
 		DtFecha fecha;
-		int duracion:
+		int duracion;
 		int distancia;
 
 	public:
 
 		DtViajeBase(DtFecha fecha, int duracion, int distancia);
-		
+
 		DtFecha getFecha();
 		int getDuracion();
 		int getDistancia();
@@ -22,12 +24,12 @@ class DtViajeBase{
 		void setFecha(DtFecha fecha);
 		void setDuracion(int duracion);
 		void setDistancia(int distancia);
-		
+
 		virtual ~DtViajeBase();
 
 
 
-}
+};
 
 #endif
 

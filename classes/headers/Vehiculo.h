@@ -1,25 +1,25 @@
-#ifndef USUARIO_H
-#define USUARIO_H
+#ifndef VEHICULO_H
+#define VEHICULO_H
 #include "Viaje.h"
 
 
 class Vehiculo
 {
-private:
+protected:
 	int nroSerie;
 	float porcentajeBateria, precioBase;
 
-
+	Viaje* viajes;
 
 public:
 	//Constructor
-	Vehiculo(int nroSerie, float porcentajeBateria, float precioBase);
+	Vehiculo(int nroSerie,float porcentajeBateria,float precioBase);
 
 	//Getters
 	int getNroSerie();
 	float getPorcentajeBateria();
 	float getPrecioBase();
-	Viaje* Viajes;
+
 
 	//Setters
 	void setNroSerie(int nroSerie);
@@ -27,7 +27,8 @@ public:
 	void setPrecioBase(float precioBase);
 
 
-	virtual float DarPrecioViaje(int duracion, int distancia);
+	virtual float DarPrecioViaje(int duracion, int distancia)=0; //return 0
 
+	virtual ~Vehiculo();
 };
 #endif

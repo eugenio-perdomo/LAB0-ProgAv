@@ -2,29 +2,26 @@
 #define MONOPATIN_H
 #include "../headers/Vehiculo.h"
 
-class Vehiculo;
-
-class Monopatin : public Vehiculo{
-
-	private:
-		bool tieneLuces;
-
+class Monopatin : public Vehiculo {
 
 	public:
 
 		//Constructor
-		Monopatin(bool tieneLuces);
+		Monopatin(int nroSerie, float porcentajeBateria, float precioBase,int tieneLuces);
 
 		//Metodo
 		float darPrecioViaje(int duracion, int distancia);
 
 		// Getter
-		bool getTieneLuces();
+		int getTieneLuces();
 
 		//Setter
-		void setTieneLuces();
+		void setTieneLuces(int tieneLuces);
 
+        virtual ~Monopatin();
+    private:
+		int tieneLuces;
 
-}
+};
 
 #endif

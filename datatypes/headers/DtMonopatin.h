@@ -1,26 +1,27 @@
-#ifndef USUARIO_H
-#define USUARIO_H
+#ifndef DTMONOPATIN_H
+#define DTMONOPATIN_H
 #include <iostream>
+#include "DtVehiculo.h"
 
-class DtMonopatin
+class DtMonopatin : public DtVehiculo
 {
 	private:
-		bool tieneLuces;
-		
+		int tieneLuces;
+
 
 	public:
 		//Constructor
-		DtMonopatin(bool tieneLuces);
+		DtMonopatin(int tieneLuces,int nroSerie, float porcentajeBateria, float precioBase);
 
 		//Getters
-		bool getTieneLuces();
+		int getTieneLuces();
 
 
 		//Setters
-		void setTieneLuces(bool tieneLuces);
+		void setTieneLuces(int tieneLuces);
 
 
-	virtual ~DtMonopatin(); 
+	virtual ~DtMonopatin();
 
 
 };

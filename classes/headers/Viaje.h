@@ -16,19 +16,19 @@ class Viaje {
 		Vehiculo** Vehiculos;
 
 	public:
-		
+
 		Viaje(DtFecha fechaViaje, int duracion, int distancia);
 
 		DtFecha getFechaViaje();
 		int getDuracion();
 		int getDistancia();
 
-		DtFecha setFechaViaje();
-		void setDuracion();
-		void setDistancia();
+		void setFechaViaje(DtFecha &fechaViaje);
+		void setDuracion(int duracion);
+		void setDistancia(int distancia);
 
 		virtual ~Viaje();
-	
+
 };
 #endif
 

@@ -2,7 +2,7 @@
 
 
 // -------------------------- Constructor --------------------------//
-class viaje(DtFecha fechaViaje, int duracion, int distancia){
+Viaje::Viaje(DtFecha fechaViaje, int duracion, int distancia):fechaViaje(fechaViaje){
 
 	this->fechaViaje=fechaViaje;
 	this->duracion=duracion;
@@ -26,7 +26,7 @@ int Viaje::getDistancia(){
 }
 
 // ------- Setters ------- //
-DtFecha Viaje::setFechaViaje(DtFecha fechaViaje){
+void Viaje::setFechaViaje(DtFecha &fechaViaje){
 		this->fechaViaje=fechaViaje;
 
 }

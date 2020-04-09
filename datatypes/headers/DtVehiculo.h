@@ -1,13 +1,14 @@
-#ifndef USUARIO_H
-#define USUARIO_H
+#ifndef DTVEHICULO_H
+#define DTVEHICULO_H
 #include <iostream>
-#include "../../classes/headers/Viaje.h"
+//#include "../../classes/headers/Viaje.h"
 
 class DtVehiculo
 {
-	private:
+	protected:
 		int nroSerie;
-		float porcentajeBateria, precioBase;
+		float porcentajeBateria;
+		float precioBase;
 
 	public:
 		//Constructor
@@ -24,7 +25,7 @@ class DtVehiculo
 		void setPrecioBase(float precioBase);
 
 
-	virtual ~DtVehiculo(); 
+	virtual ~DtVehiculo();
 
 
 };

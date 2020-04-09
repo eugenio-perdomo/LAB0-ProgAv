@@ -1,0 +1,123 @@
+# depslib dependency file v1.0
+1586378710 source:c:\users\stchn\documents\lab\laboratorio\classes\sources\usuario.cpp
+	"../headers/Usuario.h"
+
+1586309485 c:\users\stchn\documents\lab\laboratorio\classes\headers\usuario.h
+	"../../datatypes/headers/DtFecha.h"
+	"Viaje.h"
+
+1586404599 c:\users\stchn\documents\lab\laboratorio\datatypes\headers\dtfecha.h
+	<iostream>
+
+1586404991 c:\users\stchn\documents\lab\laboratorio\classes\headers\viaje.h
+	"../../datatypes/headers/DtFecha.h"
+	"Usuario.h"
+
+1586378710 source:f:\cure\pa\laboratorio\classes\sources\usuario.cpp
+	"../headers/Usuario.h"
+
+1586309485 f:\cure\pa\laboratorio\classes\headers\usuario.h
+	"../../datatypes/headers/DtFecha.h"
+	"Viaje.h"
+
+1586383599 f:\cure\pa\laboratorio\datatypes\headers\dtfecha.h
+	<iostream>
+
+1586325085 f:\cure\pa\laboratorio\classes\headers\viaje.h
+	"../../datatypes/headers/DtFecha.h"
+	"Usuario.h"
+
+1586306674 source:f:\cure\pa\laboratorio\datatypes\sources\dtfecha.cpp
+	"../headers/DtFecha.h"
+
+1586221755 source:f:\cure\pa\laboratorio\main.cpp
+	<iostream>
+	"classes/sources/Usuario.cpp"
+	"classes/headers/Usuario.h"
+	"datatypes/sources/DtFecha.cpp"
+
+1586378710 f:\cure\pa\laboratorio\classes\sources\usuario.cpp
+	"../headers/Usuario.h"
+
+1586306674 f:\cure\pa\laboratorio\datatypes\sources\dtfecha.cpp
+	"../headers/DtFecha.h"
+
+1586401219 source:f:\cure\pa\laboratorio\classes\sources\bicicleta.cpp
+	"../headers/Bicicleta.h"
+
+1586400445 f:\cure\pa\laboratorio\classes\headers\bicicleta.h
+	"../headers/Vehiculo.h"
+
+1586399697 f:\cure\pa\laboratorio\classes\headers\vehiculo.h
+	"Viaje.h"
+
+1586401487 source:f:\cure\pa\laboratorio\classes\sources\vehiculo.cpp
+	"../headers/Vehiculo.h"
+
+1586405947 source:c:\users\stchn\documents\lab\laboratorio\classes\sources\bicicleta.cpp
+	"../headers/Bicicleta.h"
+
+1586405789 c:\users\stchn\documents\lab\laboratorio\classes\headers\bicicleta.h
+	"../headers/Vehiculo.h"
+
+1586410205 c:\users\stchn\documents\lab\laboratorio\classes\headers\vehiculo.h
+	"Viaje.h"
+
+1586401487 source:c:\users\stchn\documents\lab\laboratorio\classes\sources\vehiculo.cpp
+	"../headers/Vehiculo.h"
+
+1586306674 source:c:\users\stchn\documents\lab\laboratorio\datatypes\sources\dtfecha.cpp
+	"../headers/DtFecha.h"
+
+1586414854 source:c:\users\stchn\documents\lab\laboratorio\main.cpp
+	<iostream>
+	"classes/sources/Usuario.cpp"
+	"classes/headers/Usuario.h"
+	"datatypes/sources/DtFecha.cpp"
+
+1586378710 c:\users\stchn\documents\lab\laboratorio\classes\sources\usuario.cpp
+	"../headers/Usuario.h"
+
+1586306674 c:\users\stchn\documents\lab\laboratorio\datatypes\sources\dtfecha.cpp
+	"../headers/DtFecha.h"
+
+1586402492 source:c:\users\stchn\documents\lab\laboratorio\datatypes\sources\dtvehiculo.cpp
+	"../headers/DtVehiculo.h"
+
+1586411826 c:\users\stchn\documents\lab\laboratorio\datatypes\headers\dtvehiculo.h
+	<iostream>
+
+1586414147 source:c:\users\stchn\documents\lab\laboratorio\datatypes\sources\dtmonopatin.cpp
+	"../headers/DtMonopatin.h"
+
+1586411566 c:\users\stchn\documents\lab\laboratorio\datatypes\headers\dtmonopatin.h
+	<iostream>
+	"DtVehiculo.h"
+
+1586405067 source:c:\users\stchn\documents\lab\laboratorio\classes\sources\viaje.cpp
+	"../headers/Viaje.h"
+
+1586403095 source:c:\users\stchn\documents\lab\laboratorio\classes\sources\monopatin.cpp
+	"../headers/Monopatin.h"
+
+1586410680 c:\users\stchn\documents\lab\laboratorio\classes\headers\monopatin.h
+	"../headers/Vehiculo.h"
+
+1586412626 source:c:\users\stchn\documents\lab\laboratorio\datatypes\sources\dtviajebase.cpp
+	"../headers/DtViajeBase.h"
+	"../headers/DtFecha.h"
+
+1586412116 c:\users\stchn\documents\lab\laboratorio\datatypes\headers\dtviajebase.h
+	<iostream>
+	"../headers/DtFecha.h"
+
+1586414201 source:c:\users\stchn\documents\lab\laboratorio\datatypes\sources\dtviaje.cpp
+	"../headers/DtViaje.h"
+	"../headers/DtVehiculo.h"
+
+1586414201 c:\users\stchn\documents\lab\laboratorio\datatypes\headers\dtviaje.h
+	<iostream>
+	"../headers/DtVehiculo.h"
+	"DtViajeBase.h"
+	"DtFecha.h"
+

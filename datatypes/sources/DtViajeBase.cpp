@@ -1,7 +1,8 @@
 #include "../headers/DtViajeBase.h"
+#include "../headers/DtFecha.h"
 
 // -------------------------- Constructor --------------------------//
-DtViajeBase::DtViajeBase(DtFecha fecha,int duracion, int distancia){
+DtViajeBase::DtViajeBase(DtFecha fecha,int duracion, int distancia):fecha(fecha){
 
 	this->fecha=fecha;
 	this->duracion=duracion;
@@ -25,13 +26,13 @@ int DtViajeBase::getDistancia(){
 
 // ------- Setters ------- //
 
-DtFecha DtViajeBase::setFecha(DtFecha fecha){
+void DtViajeBase::setFecha(DtFecha fecha){
 	this->fecha=fecha;
 
 }
 
 void DtViajeBase::setDuracion(int duracion){
-	this-duracion=duracion;
+	this->duracion=duracion;
 
 }
 
@@ -43,4 +44,4 @@ void DtViajeBase::setDistancia(int distancia){
 // ------ Destructor -------//
 DtViajeBase::~DtViajeBase(){
 
-} 
+}

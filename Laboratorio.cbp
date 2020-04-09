@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Laboratorio" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Laboratorio" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Laboratorio" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="Definiciones.h" />
+		<Unit filename="classes/headers/Bicicleta.h" />
+		<Unit filename="classes/headers/Usuario.h" />
+		<Unit filename="classes/headers/Vehiculo.h" />
+		<Unit filename="classes/headers/Viaje.h" />
+		<Unit filename="classes/headers/monopatin.h" />
+		<Unit filename="classes/sources/Bicicleta.cpp" />
+		<Unit filename="classes/sources/Monopatin.cpp" />
+		<Unit filename="classes/sources/Usuario.cpp" />
+		<Unit filename="classes/sources/Vehiculo.cpp" />
+		<Unit filename="classes/sources/Viaje.cpp" />
+		<Unit filename="datatypes/headers/DtBicicleta.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="datatypes/headers/DtFecha.h" />
+		<Unit filename="datatypes/headers/DtMonopatin.h" />
+		<Unit filename="datatypes/headers/DtVehiculo.h" />
+		<Unit filename="datatypes/headers/DtViaje.h" />
+		<Unit filename="datatypes/headers/DtViajeBase.h" />
+		<Unit filename="datatypes/sources/DtBicicleta.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="datatypes/sources/DtFecha.cpp" />
+		<Unit filename="datatypes/sources/DtMonopatin.cpp" />
+		<Unit filename="datatypes/sources/DtVehiculo.cpp" />
+		<Unit filename="datatypes/sources/DtViaje.cpp" />
+		<Unit filename="datatypes/sources/DtViajeBase.cpp" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

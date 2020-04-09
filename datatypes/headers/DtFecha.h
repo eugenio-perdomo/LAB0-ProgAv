@@ -4,7 +4,7 @@
 #include <iostream>
 
 class DtFecha {
-   
+
     private:
     int dia;
     int mes;

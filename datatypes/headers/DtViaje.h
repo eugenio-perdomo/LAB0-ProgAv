@@ -1,30 +1,32 @@
-#ifndef DtViaje_h
-#define DtViaje_h
+#ifndef DTVIAJE_H
+#define DTVIAJE_H
 #include <iostream>
 #include "../headers/DtVehiculo.h"
+#include "DtViajeBase.h"
+#include "DtFecha.h"
 
 
-class DtViaje: public DtViajeBase{
+class DtViaje : public DtViajeBase{
 		private:
 			float precioTotal;
-			DtVehiculo vehiculo;
+			//DtVehiculo vehiculo;
 
 		public:
 			//Constructor
-			DtViaje(float precioTotal, DtVehiculo vehiculo);
+			DtViaje(float precioTotal, /*DtVehiculo vehiculo,*/DtFecha fecha, int duracion, int distancia);
 
-			//Getters	
+			//Getters
 			float getPrecioTotal();
-			DtVehiculo getVehiculo();
+			//DtVehiculo getVehiculo();
 
 			//Setters
-			void setPrecioTotal();
-			void setVehiculo();
+			void setPrecioTotal(float precioTotal);
+		//	void setVehiculo(DtVehiculo vehiculo);
 
-			//Destructor	
+			//Destructor
 			virtual ~DtViaje();
 
+};
 
-
-}
 #endif
+

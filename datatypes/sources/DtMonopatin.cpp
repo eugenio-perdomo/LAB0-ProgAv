@@ -1,25 +1,27 @@
+#include "../headers/DtMonopatin.h"
 
-DtMonopatin::DtMonopatin(bool tieneLuces)
+
+DtMonopatin::DtMonopatin(int tieneLuces,int nroSerie, float porcentajeBateria, float precioBase):DtVehiculo(nroSerie,porcentajeBateria,precioBase)
 {
 	this->tieneLuces=tieneLuces;
-	
+
 }
 
 
 //Getters
 int DtMonopatin::getTieneLuces()
 {
-	return this->nroSerie;
+	return this->tieneLuces;
 }
 
 
 //Setters
-void DtMonopatin::TieneLuces(bool tieneLuces)
+void DtMonopatin::setTieneLuces(int tieneLuces)
 {
 	this->tieneLuces=tieneLuces;
 }
 
 
-DtVehiculo::~DtVehiculo(){
-	
+DtMonopatin::~DtMonopatin(){
+
 }

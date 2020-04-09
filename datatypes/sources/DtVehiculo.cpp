@@ -1,4 +1,4 @@
-
+#include "../headers/DtVehiculo.h"
 DtVehiculo::DtVehiculo(int nroSerie, float porcentajeBateria, float precioBase)
 {
 	this->nroSerie=nroSerie;
@@ -25,7 +25,7 @@ float DtVehiculo::getPrecioBase()
 
 
 //Setters
-void DtVehiculo::setProSerie(int nroSerie)
+void DtVehiculo::setNroSerie(int nroSerie)
 {
 	this->nroSerie=nroSerie;
 }
@@ -42,5 +42,5 @@ void DtVehiculo::setPrecioBase(float precioBase)
 
 
 DtVehiculo::~DtVehiculo(){
-	
+
 }

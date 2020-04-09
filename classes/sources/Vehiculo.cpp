@@ -1,4 +1,4 @@
-
+#include "../headers/Vehiculo.h"
 
 // -------------------------- Constructor --------------------------//
 Vehiculo::Vehiculo(int nroSerie, float porcentajeBateria, float precioBase)
@@ -44,10 +44,6 @@ void Vehiculo::setPrecioBase(float precioBase)
 
 
 // ------ Destructor -------//
-Vehiculo::~Vehiculo();
-
-
-virtual float Vehiculo::DarPrecioViaje(int duracion, int distancia){
-
-
-}
+Vehiculo::~Vehiculo(){
+	
+};

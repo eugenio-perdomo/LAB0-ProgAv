@@ -1,23 +1,28 @@
 #include "../headers/Bicicleta.h"
 
 // -------------------------- Constructor --------------------------//
-class Bicicleta(TipoBici tipo, int cantCambios){
 
+Bicicleta::Bicicleta( int nroSerie, float porcentajeBateria, float precioBase, TipoBici tipo, int cantCambios):Vehiculo(nroSerie, porcentajeBateria, precioBase){
+//Bicicleta::Bicicleta((TipoBici tipo, int cantCambios):Vehiculo(int nroSerie,float porcentajeBateria, float precioBase)){
+
+	this->nroSerie=nroSerie;
+	this->porcentajeBateria=porcentajeBateria;
+	this->precioBase=precioBase;
 	this->tipo=tipo;
 	this->cantCambios=cantCambios;
 
 }
 
-float darPrecioViaje(int duracion, int distancia){
+float Bicicleta::darPrecioViaje(int duracion, int distancia){
 
-	int precio = 0;
-	precio = precioBase * distancia;
+	//int precio = 0;
+	//precio = this->precioBase * distancia;
 
-	return precio;
+	return this->precioBase * distancia;
 }
 
 // ------ Getters ---------//
-TipoBici Bicicleta::getTipoBici(){
+Bicicleta::TipoBici Bicicleta::getTipo(){
 	return this->tipo;
 }
 
@@ -27,13 +32,13 @@ int Bicicleta::getCantCambios(){
 }
 
 // ------- Setters ------- //
-TipoBici Bicicleta::setTipoBici(){
-		this->tipo=tipo;
+void Bicicleta::setTipoBici(TipoBici tipo){
+    this->tipo=tipo;
 
 }
 
 
-void Bicicleta::setCantCambios(){
+void Bicicleta::setCantCambios(int cantCambios){
 	this->cantCambios=cantCambios;
 
 }

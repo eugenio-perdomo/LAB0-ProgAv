@@ -2,29 +2,33 @@
 #define BICICLETA_H
 #include "../headers/Vehiculo.h"
 
-class Bicileta : public Vehiculo{
 
-	private:
-		enum TipoBici{Paseo, Montaña};
-		
-		TipoBici tipo;
-		int cantCambios;
+
+class Bicicleta : public Vehiculo{
 
 	public:
-		
 
-		Bicicleta(TipoBici tipo, int cantCambios);
+        enum TipoBici{Paseo,Montania};
+
+		Bicicleta(int nroSerie, float porcentajeBateria, float precioBase, TipoBici tipo,int cantCambios);//, int nroSerie, float porcentajeBateria, float precioBase):Vehiculo(nroSerie, porcentajeBateria, precioBase);
 
 		float darPrecioViaje(int duracion, int distancia);
 
-		TipoBici getTipoBici();
+		TipoBici getTipo();
 		int getCantCambios();
 
 
-		TipoBici setTipoBici();
-		void setCantCambios();
+		void setTipoBici(TipoBici tipo);
+		void setCantCambios(int cantCambios);
 
-}
+		virtual ~Bicicleta();
+
+    private:
+
+        TipoBici tipo;
+		int cantCambios;
+};
+
 
 
 #endif

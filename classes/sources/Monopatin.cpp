@@ -2,38 +2,40 @@
 
 
 	// -------------------------- Constructor --------------------------//
-	Monopatin::Monopatin(bool tieneLuces){
+	Monopatin::Monopatin(int nroSerie, float porcentajeBateria, float precioBase,int tieneLuces):Vehiculo(nroSerie, porcentajeBateria, precioBase){
+		this->nroSerie=nroSerie;
+		this->porcentajeBateria=porcentajeBateria;
+		this->precioBase=precioBase;
 		this->tieneLuces=tieneLuces;
-
 	}
 // -------------------------- Método --------------------------//
 	float Monopatin::darPrecioViaje(int duracion, int distancia){
 
 		int precio = 0;
-		if (tieneLuces=true)
+		if (tieneLuces==1)
 		{
-			precio = 0.5 * duracion + distancia * precioBase;
+			precio = 0.5 * duracion + distancia * this->precioBase;
 		} else{
 
-			precio = distancia * precioBase;
+			precio = distancia * this->precioBase;
 		}
 
 		return precio;
 	}
 
 // ------ Getter ---------//
-bool getTieneLuces(){
-	return this->getTieneLuces=getTieneLuces;
+int Monopatin::getTieneLuces(){
+	return this->tieneLuces;
 
 }
 
 // ------- Setter ------- //
-void setTieneLuces(){
+void Monopatin::setTieneLuces(int tieneLuces){
 	this->tieneLuces=tieneLuces;
 }
 
 // ------ Destructor -------//
 Monopatin::~Monopatin(){
 
-	
+
 }
