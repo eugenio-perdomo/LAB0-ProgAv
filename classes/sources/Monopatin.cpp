@@ -1,8 +1,8 @@
 #include "../headers/Monopatin.h"
-
+#include "../headers/Vehiculo.h"
 
 	// -------------------------- Constructor --------------------------//
-	Monopatin::Monopatin(int nroSerie, float porcentajeBateria, float precioBase,int tieneLuces):Vehiculo(nroSerie, porcentajeBateria, precioBase){
+Monopatin::Monopatin(int nroSerie, float porcentajeBateria, float precioBase, int tieneLuces):Vehiculo(nroSerie, porcentajeBateria, precioBase){
 		this->nroSerie=nroSerie;
 		this->porcentajeBateria=porcentajeBateria;
 		this->precioBase=precioBase;

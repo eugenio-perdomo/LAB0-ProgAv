@@ -10,7 +10,7 @@ protected:
 	float porcentajeBateria, precioBase;
 
 	Viaje* viajes;
-
+	
 public:
 	//Constructor
 	Vehiculo(int nroSerie,float porcentajeBateria,float precioBase);
@@ -27,7 +27,7 @@ public:
 	void setPrecioBase(float precioBase);
 
 
-	virtual float DarPrecioViaje(int duracion, int distancia)=0; //return 0
+	virtual float DarPrecioViaje(int duracion, int distancia) = 0; //{return 0;}
 
 	virtual ~Vehiculo();
 };

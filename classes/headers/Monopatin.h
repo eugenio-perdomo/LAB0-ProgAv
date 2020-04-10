@@ -1,6 +1,6 @@
 #ifndef MONOPATIN_H
 #define MONOPATIN_H
-#include "../headers/Vehiculo.h"
+#include "Vehiculo.h"
 
 class Monopatin : public Vehiculo {
 
@@ -19,9 +19,8 @@ class Monopatin : public Vehiculo {
 		void setTieneLuces(int tieneLuces);
 
         virtual ~Monopatin();
+
     private:
 		int tieneLuces;
-
 };
-
 #endif

@@ -2,8 +2,7 @@
 #define DTBICICLETA_H
 #include "DtVehiculo.h"
 
-
-class DtBicicleta: public DtVehiculo{
+class DtBicicleta : public DtVehiculo{
 
    public:
 
@@ -11,10 +10,8 @@ class DtBicicleta: public DtVehiculo{
 
 		DtBicicleta(TipoBici tipo, int cantCambios, int nroSerie, float porcentaje, float precioBase);
 
-
 		TipoBici getTipo();
 		int getCantCambios();
-
 
 		void setTipoBici(TipoBici tipo);
 		void setCantCambios(int cantCambios);
@@ -26,11 +23,5 @@ class DtBicicleta: public DtVehiculo{
         TipoBici tipo;
 		int cantCambios;
 
-
-
-
 };
-
-
-
 #endif // DTBICICLETA_H

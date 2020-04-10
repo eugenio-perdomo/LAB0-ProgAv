@@ -1,7 +1,8 @@
-#include "../../headers/DtBicicleta.h"
+#include "../headers/DtBicicleta.h"
+#include "../headers/dtvehiculo.h"
 
 
-DtBicicleta(TipoBici tipo, int cantCambios, int nroSerie, float porcentaje, float precioBase):DtVehiculo(nroSerie,porcentaje,precioBase){
+DtBicicleta::DtBicicleta(TipoBici tipo, int cantCambios, int nroSerie, float porcentaje, float precioBase):DtVehiculo(nroSerie,porcentaje,precioBase){
 
     this->nroSerie=nroSerie;
 	this->porcentajeBateria=porcentajeBateria;

@@ -4,14 +4,14 @@
 #include "Viaje.h"
 
 class Viaje;
-
-
 class Usuario
 {
 private:
     std::string cedula;
     std::string nombre;
     DtFecha fechaIngreso;
+
+    int cantidadViajes;
 
     Viaje** viajes;
 
@@ -30,6 +30,9 @@ public:
     void setCedula(std::string cedula);
     void setFechaIngreso(DtFecha &fechaIngreso);
 
+    //FuncionesAgregadas
+    void ingresarViaje(Viaje* viaje);
+    Viaje** getViajes();
 
     virtual ~Usuario();
 

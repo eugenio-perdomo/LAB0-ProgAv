@@ -5,6 +5,8 @@ Usuario::Usuario(std::string nombre, std::string cedula, DtFecha fechaIngreso):f
 	this->cedula=cedula;
 	this->nombre=nombre;
 	this->fechaIngreso=fechaIngreso;
+	this->viajes = new Viaje*[MAX_VIAJES];
+	this->cantidadViajes=0;
 }
 
 // ------ Getters ---------//
@@ -18,7 +20,6 @@ std::string Usuario::getCedula(){
 
 DtFecha Usuario::getFechaIngreso(){
 	return this->fechaIngreso;
-
 
 }
 // ------- Setters ------- //
@@ -35,7 +36,16 @@ void Usuario::setCedula(std::string cedula){
 void Usuario::setFechaIngreso(DtFecha &fechaIngreso){
 	this->fechaIngreso=fechaIngreso;
 
+}
 
+void Usuario::ingresarViaje(Viaje* viaje){
+
+this->viajes[this->cantidadViajes] = viaje;
+this-> cantidadViajes++;
+
+}
+Viaje** Usuario::getViajes() {
+    return this->viajes;
 }
 
 // ------ Destructor -------//

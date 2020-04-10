@@ -32,38 +32,76 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="Definiciones.h" />
-		<Unit filename="classes/headers/Bicicleta.h" />
-		<Unit filename="classes/headers/Usuario.h" />
-		<Unit filename="classes/headers/Vehiculo.h" />
-		<Unit filename="classes/headers/Viaje.h" />
-		<Unit filename="classes/headers/monopatin.h" />
-		<Unit filename="classes/sources/Bicicleta.cpp" />
-		<Unit filename="classes/sources/Monopatin.cpp" />
-		<Unit filename="classes/sources/Usuario.cpp" />
-		<Unit filename="classes/sources/Vehiculo.cpp" />
-		<Unit filename="classes/sources/Viaje.cpp" />
-		<Unit filename="datatypes/headers/DtBicicleta.h">
-			<Option target="&lt;{~None~}&gt;" />
+		<Unit filename="Definiciones.h">
+			<Option target="Release" />
 		</Unit>
-		<Unit filename="datatypes/headers/DtFecha.h" />
-		<Unit filename="datatypes/headers/DtMonopatin.h" />
-		<Unit filename="datatypes/headers/DtVehiculo.h" />
-		<Unit filename="datatypes/headers/DtViaje.h" />
-		<Unit filename="datatypes/headers/DtViajeBase.h" />
+		<Unit filename="Funciones.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="classes/headers/Usuario.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="classes/headers/Vehiculo.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="classes/headers/Viaje.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="classes/sources/Bicicleta.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="classes/sources/Monopatin.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="classes/sources/Usuario.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="classes/sources/Vehiculo.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="classes/sources/Viaje.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="datatypes/headers/DtFecha.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="datatypes/headers/DtVehiculo.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="datatypes/headers/DtViaje.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="datatypes/headers/dtbicicleta.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="datatypes/headers/dtmonopatin.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="datatypes/headers/dtviajebase.h">
+			<Option target="Release" />
+		</Unit>
 		<Unit filename="datatypes/sources/DtBicicleta.cpp">
-			<Option target="&lt;{~None~}&gt;" />
+			<Option target="Release" />
 		</Unit>
-		<Unit filename="datatypes/sources/DtFecha.cpp" />
-		<Unit filename="datatypes/sources/DtMonopatin.cpp" />
-		<Unit filename="datatypes/sources/DtVehiculo.cpp" />
-		<Unit filename="datatypes/sources/DtViaje.cpp" />
-		<Unit filename="datatypes/sources/DtViajeBase.cpp" />
-		<Unit filename="main.cpp" />
+		<Unit filename="datatypes/sources/DtFecha.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="datatypes/sources/DtMonopatin.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="datatypes/sources/DtVehiculo.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="datatypes/sources/DtViaje.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="datatypes/sources/DtViajeBase.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="main.cpp">
+			<Option target="Release" />
+		</Unit>
 		<Extensions>
-			<code_completion />
-			<envvars />
-			<debugger />
 			<lib_finder disable_auto="1" />
 		</Extensions>
 	</Project>

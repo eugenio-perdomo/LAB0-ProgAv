@@ -3,7 +3,6 @@
 #include "../headers/Vehiculo.h"
 
 
-
 class Bicicleta : public Vehiculo{
 
 	public:
@@ -28,7 +27,7 @@ class Bicicleta : public Vehiculo{
         TipoBici tipo;
 		int cantCambios;
 };
-
+	
 
 
 #endif

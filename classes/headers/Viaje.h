@@ -1,10 +1,9 @@
 #ifndef VIAJE_H
 #define VIAJE_H
 #include "../../datatypes/headers/DtFecha.h"
-#include "Usuario.h"
 
-class Usuario;
 class Vehiculo;
+class Usuario;
 
 class Viaje {
 	private:
@@ -12,8 +11,8 @@ class Viaje {
 		int duracion;
 		int distancia;
 
-		Usuario* usuario;
-		Vehiculo** Vehiculos;
+		Usuario** usuario;
+		Vehiculo** vehiculos;
 
 	public:
 

@@ -43,5 +43,4 @@ void DtFecha::setAnio(int anio)
 
 DtFecha::~DtFecha(){
 
-	
 }

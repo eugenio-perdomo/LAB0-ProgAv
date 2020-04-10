@@ -8,10 +8,9 @@ class DtMonopatin : public DtVehiculo
 	private:
 		int tieneLuces;
 
-
 	public:
 		//Constructor
-		DtMonopatin(int tieneLuces,int nroSerie, float porcentajeBateria, float precioBase);
+		DtMonopatin(int tieneLuces, int nroSerie, float porcentajeBateria, float precioBase);
 
 		//Getters
 		int getTieneLuces();

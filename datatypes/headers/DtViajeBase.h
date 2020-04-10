@@ -1,9 +1,7 @@
 #ifndef DTVIAJEBASE_H
 #define DTVIAJEBASE_H
 #include <iostream>
-#include "../headers/DtFecha.h"
-
-
+#include "DtFecha.h"
 
 class DtViajeBase{
 
