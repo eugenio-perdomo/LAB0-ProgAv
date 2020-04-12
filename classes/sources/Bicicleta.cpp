@@ -1,9 +1,7 @@
 #include "../headers/Bicicleta.h"
 
 // -------------------------- Constructor --------------------------//
-
 Bicicleta::Bicicleta( int nroSerie, float porcentajeBateria, float precioBase, TipoBici tipo, int cantCambios):Vehiculo(nroSerie, porcentajeBateria, precioBase){
-//Bicicleta::Bicicleta((TipoBici tipo, int cantCambios):Vehiculo(int nroSerie,float porcentajeBateria, float precioBase)){
 
 	this->nroSerie=nroSerie;
 	this->porcentajeBateria=porcentajeBateria;
@@ -14,9 +12,6 @@ Bicicleta::Bicicleta( int nroSerie, float porcentajeBateria, float precioBase, T
 }
 
 float Bicicleta::darPrecioViaje(int duracion, int distancia){
-
-	//int precio = 0;
-	//precio = this->precioBase * distancia;
 
 	return this->precioBase * distancia;
 }

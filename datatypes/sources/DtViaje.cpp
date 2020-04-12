@@ -2,7 +2,9 @@
 
 
 // -------------------------- Constructor --------------------------//
-DtViaje::DtViaje(float precioTotal, DtFecha& fecha, int duracion, int distancia):DtViajeBase(fecha, duracion, distancia){
+
+DtViaje::DtViaje(float precioTotal, DtFecha fecha, int duracion, int distancia):DtViajeBase(fecha, duracion, distancia){ //&
+
     this->fecha=fecha;
     this->duracion=duracion;
     this->distancia=distancia;
@@ -24,6 +26,12 @@ void DtViaje::setVehiculo(DtVehiculo vehiculo){
 	this->vehiculo=vehiculo;
 
 }*/
+
+
+/*DtViaje* DtViaje::copiarViaje(DtViaje dt){
+	return new DtViaje(dt);
+}*/
+
 
 // ------- Setters ------- //
 void DtViaje::setPrecioTotal(float precioTotal){

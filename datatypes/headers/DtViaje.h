@@ -12,7 +12,8 @@ class DtViaje : public DtViajeBase{
 
 		public:
 			//Constructor
-			DtViaje(float precioTotal, DtFecha& fecha, int duracion, int distancia);
+
+			DtViaje(float precioTotal, DtFecha fecha, int duracion, int distancia); //aca habia un &
 
 			//Getters
 			float getPrecioTotal();
@@ -21,6 +22,7 @@ class DtViaje : public DtViajeBase{
 			//Setters
 			void setPrecioTotal(float precioTotal);
 			//void setVehiculo(DtVehiculo vehiculo);
+
 
 			//Destructor
 			virtual ~DtViaje();

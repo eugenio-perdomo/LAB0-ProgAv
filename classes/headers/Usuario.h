@@ -31,8 +31,16 @@ public:
     void setFechaIngreso(DtFecha &fechaIngreso);
 
     //FuncionesAgregadas
-    void ingresarViaje(Viaje* viaje);
+  void ingresarViaje(Viaje* viaje);
     Viaje** getViajes();
+    Viaje* getViaje(int i);
+    void eliminarViajes(std::string ci, DtFecha fecha);
+    int getCantViajes();
+
+    //void printViajes(Usuario* user);
+
+  
+
 
     virtual ~Usuario();
 

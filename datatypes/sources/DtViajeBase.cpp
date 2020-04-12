@@ -3,7 +3,6 @@
 
 // -------------------------- Constructor --------------------------//
 DtViajeBase::DtViajeBase(DtFecha fecha,int duracion, int distancia):fecha(fecha){
-
 	this->fecha=fecha;
 	this->duracion=duracion;
 	this->distancia=distancia;

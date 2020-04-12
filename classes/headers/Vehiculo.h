@@ -8,7 +8,7 @@ class Vehiculo
 protected:
 	int nroSerie;
 	float porcentajeBateria, precioBase;
-
+	int cantidadVehiculos;
 	Viaje* viajes;
 	
 public:
@@ -19,7 +19,7 @@ public:
 	int getNroSerie();
 	float getPorcentajeBateria();
 	float getPrecioBase();
-
+	float getCantidadVehiculos();
 
 	//Setters
 	void setNroSerie(int nroSerie);
@@ -27,7 +27,9 @@ public:
 	void setPrecioBase(float precioBase);
 
 
-	virtual float DarPrecioViaje(int duracion, int distancia) = 0; //{return 0;}
+	virtual float DarPrecioViaje(int duracion, int distancia){
+			return 0;
+	} //{return 0;}
 
 	virtual ~Vehiculo();
 };

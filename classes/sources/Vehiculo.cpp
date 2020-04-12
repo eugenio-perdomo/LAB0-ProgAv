@@ -6,6 +6,7 @@ Vehiculo::Vehiculo(int nroSerie, float porcentajeBateria, float precioBase)
 	this->nroSerie=nroSerie;
 	this->porcentajeBateria=porcentajeBateria;
 	this->precioBase=precioBase;
+	this->cantidadVehiculos=0;
 }
 
 
@@ -23,6 +24,11 @@ float Vehiculo::getPorcentajeBateria()
 float Vehiculo::getPrecioBase()
 {
 	return this->precioBase;
+}
+
+float Vehiculo::getCantidadVehiculos(){
+
+	return this->cantidadVehiculos;
 }
 
 

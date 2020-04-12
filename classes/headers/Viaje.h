@@ -14,6 +14,7 @@ class Viaje {
 		Usuario** usuario;
 		Vehiculo** vehiculos;
 
+
 	public:
 
 		Viaje(DtFecha fechaViaje, int duracion, int distancia);

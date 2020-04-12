@@ -1,6 +1,6 @@
 #include "../headers/Usuario.h"
 
-// -------------------------- Constructor --------------------------//
+//-------------------------- Constructor --------------------------//
 Usuario::Usuario(std::string nombre, std::string cedula, DtFecha fechaIngreso):fechaIngreso(fechaIngreso){
 	this->cedula=cedula;
 	this->nombre=nombre;
@@ -23,7 +23,6 @@ DtFecha Usuario::getFechaIngreso(){
 
 }
 // ------- Setters ------- //
-
 void Usuario::setNombre(std::string nombre){
 	this->nombre=nombre;
 
@@ -38,13 +37,28 @@ void Usuario::setFechaIngreso(DtFecha &fechaIngreso){
 
 }
 
+
 void Usuario::ingresarViaje(Viaje* viaje){
 
 this->viajes[this->cantidadViajes] = viaje;
 this-> cantidadViajes++;
 
 }
-Viaje** Usuario::getViajes() {
+
+
+int Usuario::getCantViajes(){
+	return this->cantidadViajes;
+
+}
+
+
+Viaje* Usuario::getViaje(int i){
+    return this->viajes[i];
+}
+
+
+Viaje** Usuario::getViajes(){
+
     return this->viajes;
 }
 
