@@ -16,6 +16,7 @@ class DtBicicleta : public DtVehiculo{
 		void setTipoBici(TipoBici tipo);
 		void setCantCambios(int cantCambios);
 
+		friend std::ostream& operator<<(std::ostream& os, const DtBicicleta& DtBicicleta);
 		virtual ~DtBicicleta();
 
     private:

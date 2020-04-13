@@ -111,7 +111,7 @@ int main()
                 std::cout << "Ingrese distancia viaje\n";
                 std::cin >> distancia;
                 user->ingresarViaje(new Viaje(DtFecha(dia,mes,anio),duracion,distancia));
-                //std::cout << "Duracion del viaje:" <<user->getViajes()[0]->getDuracion() << std::endl;
+               
                 
 
             }

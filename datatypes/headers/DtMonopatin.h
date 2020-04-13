@@ -6,7 +6,7 @@
 class DtMonopatin : public DtVehiculo
 {
 	private:
-		int tieneLuces;
+		bool tieneLuces;
 
 	public:
 		//Constructor
@@ -19,7 +19,7 @@ class DtMonopatin : public DtVehiculo
 		//Setters
 		void setTieneLuces(int tieneLuces);
 
-
+		friend std::ostream& operator<<(std::ostream& os, const DtMonopatin& Monopatin);
 	virtual ~DtMonopatin();
 
 
