@@ -38,6 +38,8 @@ void Bicicleta::setCantCambios(int cantCambios){
 
 }
 
+
+
 // ------ Destructor -------//
 Bicicleta::~Bicicleta(){
 

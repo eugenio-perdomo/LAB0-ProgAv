@@ -1,5 +1,6 @@
 #include "../headers/Vehiculo.h"
 
+
 // -------------------------- Constructor --------------------------//
 Vehiculo::Vehiculo(int nroSerie, float porcentajeBateria, float precioBase)
 {
@@ -47,7 +48,6 @@ void Vehiculo::setPrecioBase(float precioBase)
 {
 	this->precioBase=precioBase;
 }
-
 
 // ------ Destructor -------//
 Vehiculo::~Vehiculo(){

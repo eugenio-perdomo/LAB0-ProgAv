@@ -1,5 +1,5 @@
 #include "../headers/DtBicicleta.h"
-#include "../headers/dtvehiculo.h"
+#include "../headers/DtVehiculo.h"
 
 
 DtBicicleta::DtBicicleta(TipoBici tipo, int cantCambios, int nroSerie, float porcentaje, float precioBase):DtVehiculo(nroSerie,porcentaje,precioBase){

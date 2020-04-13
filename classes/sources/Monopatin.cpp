@@ -34,6 +34,8 @@ void Monopatin::setTieneLuces(int tieneLuces){
 	this->tieneLuces=tieneLuces;
 }
 
+
+
 // ------ Destructor -------//
 Monopatin::~Monopatin(){
 

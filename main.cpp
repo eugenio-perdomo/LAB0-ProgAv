@@ -122,19 +122,22 @@ int main()
                 std::cin >> ci;
 
                 Usuario *user = obtenerUsuarioPorCi(ci); 
-                if (obtenerUsuarioPorCi(ci) != NULL)
-                {
-                      
-                  throw std::invalid_argument("Ya existe un usario con esa cedula");
-                }
-                 
+                
                 int cantViajes =  user->getCantViajes();
                 std::cout <<" Ingrese la fecha desde la que quiere mostrar los viajes separada por espacios dd/mm/aaaa\n";
                 int dia,mes,anio;
                 std::cin >> dia >> mes >> anio;
                 
-                verViajesAntesDeFecha(DtFecha(dia,mes,anio),ci,cantViajes);
-            
+                    DtViaje **retorno = verViajesAntesDeFecha(DtFecha(dia,mes,anio),ci,cantViajes);
+                
+                
+                 int i=0;
+                while(retorno[i]!=NULL){
+                    std::cout << "Informacion del viaje" << std::endl;
+                    std::cout << retorno[i] << std::endl;
+                    i++;
+                }
+                
             }
 
             else if(comando == 5)
@@ -283,13 +286,10 @@ void obtenerViajes(std::string ci, DtFecha fecha)
     {
       
         Viaje* v = user->getViaje(0);
-        //user->getViaje();
-        // Viaje* viaje = user->getViaje();
-        //if((user->getViajes()getDia()==DtFecha.getDia)&&(user->getViajes().getMes()==DtFecha.getMes())&&(user->getViajes().getAnio==DtFecha.getAnio()))
-        if((user->getViaje(i)->getFechaViaje()==fecha))
+               if((user->getViaje(i)->getFechaViaje()==fecha))
         {
 
-          cout<< "Hola"<<endl;
+          cout<< "NO_IMPLEMENTADO"<<endl;
           //.~Viaje();
 
         }
@@ -318,6 +318,8 @@ DtViaje** verViajesAntesDeFecha(const DtFecha& fecha,std::string cedula, int& ca
 
                 retorno[i] = new DtViaje(10, user->getViaje(i)->getFechaViaje(),user->getViaje(i)->getDuracion(), user->getViaje(i)->getDistancia());
 
+
+                
             }
         }
 

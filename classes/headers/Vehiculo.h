@@ -2,7 +2,6 @@
 #define VEHICULO_H
 #include "Viaje.h"
 
-
 class Vehiculo
 {
 protected:
@@ -25,7 +24,6 @@ public:
 	void setNroSerie(int nroSerie);
 	void setPorcentajeBateria(float porcentajeBateria);
 	void setPrecioBase(float precioBase);
-
 
 	virtual float DarPrecioViaje(int duracion, int distancia){
 			return 0;

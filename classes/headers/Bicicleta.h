@@ -20,6 +20,7 @@ class Bicicleta : public Vehiculo{
 		void setTipoBici(TipoBici tipo);
 		void setCantCambios(int cantCambios);
 
+		
 		virtual ~Bicicleta();
 
     private:

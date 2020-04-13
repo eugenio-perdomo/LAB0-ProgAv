@@ -17,7 +17,7 @@ class Monopatin : public Vehiculo {
 
 		//Setter
 		void setTieneLuces(int tieneLuces);
-
+	
         virtual ~Monopatin();
 
     private:

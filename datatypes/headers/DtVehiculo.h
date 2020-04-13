@@ -23,6 +23,7 @@ class DtVehiculo
 		void setPorcentajeBateria(float porcentajeBateria);
 		void setPrecioBase(float precioBase);
 
+		
 
 	virtual ~DtVehiculo();
 
