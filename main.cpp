@@ -11,9 +11,7 @@
 #include "datatypes/sources/DtViaje.cpp"
 #include "classes/sources/Vehiculo.cpp"
 
-
 using namespace std;
-
 
 int cantidadUsuarios = 0;
 int cantidadVehiculos = 0;
@@ -37,151 +35,127 @@ void printViajes(Usuario* user);
 DtViaje** verViajesAntesDeFecha(const DtFecha& fecha,std::string cedula, int& cantViajes);
 void registrarVehiculo(int nroSerie, float porcentaje, float precio);
 
-
 int main()
 {
-    int comando = 10;
+	std::string comando;
+	bool flag = true;
+	while(flag == true){
+		mostrarMenu(); 
+		getline(std::cin,comando);
+		if(comando.compare("1") == 0){
+			std::string cedula, nombre;
+			std::cout << "Ingrese Cedula\n";
+			std::cin >> cedula;
+			std::cout << "Ingrese Nombre\n";
+			std::cin >> nombre;
 
-    while(comando != 0)
-    {
-        mostrarMenu();
-        std::cout << ">";
-        std::cin >> comando;
+		if (obtenerUsuarioPorCi(cedula) != NULL)
+		{
+throw std::invalid_argument("Ya existe un usuario con esa cedula");
+}
+registrarUsuario(cedula,nombre);
+}
+if(comando.compare("2") == 0)
+{
 
-        try
-        {
-            if(comando == 1)
-            {
-                std::string cedula, nombre;
-                std::cout << "Ingrese Cedula\n";
-                std::cin >> cedula;
-                std::cout << "Ingrese Nombre\n";
-                std::cin >> nombre;
+int nroSerie;
+std::cout << "Ingrese un numero de serie\n";
+std::cin >> nroSerie;
 
-                if (obtenerUsuarioPorCi(cedula) != NULL)
-                {
-                  throw std::invalid_argument("Ya existe un usuario con esa cedula");
-                }
-                registrarUsuario(cedula,nombre);
-            }
-            else if(comando == 2)
-            {
+if(obtenerVehiculoPorSerie(nroSerie)!=NULL)
+{
+throw std::invalid_argument("Ya existe un vehiculo con ese numero de serie");
 
-                int nroSerie;
-                std::cout << "Ingrese un numero de serie\n";
-                std::cin >> nroSerie;
-
-                if(obtenerVehiculoPorSerie(nroSerie)!=NULL)
-                  {
-                    throw std::invalid_argument("Ya existe un vehiculo con ese numero de serie");
-                
-                  }
-                float porcentaje;
-                std::cout << "Ingrese un porcentaje de bateria\n";
-                std::cin >> porcentaje;
-                  if((porcentaje<0)||(porcentaje>100))
-                  {
-                    throw std::invalid_argument("Porcentaje de bateria incorrecto");
-                  }
+}
+float porcentaje;
+std::cout << "Ingrese un porcentaje de bateria\n";
+std::cin >> porcentaje;
+if((porcentaje<0)||(porcentaje>100))
+{
+throw std::invalid_argument("Porcentaje de bateria incorrecto");
+}
 
 
-                  float precio;
-                std::cout <<"Ingrese el precio del vehiculo\n";
-                std::cin>> precio;
-                
-                  if(precio<0)
-                   {
-                     throw std::invalid_argument("Precio incorrecto");
-                   }
+float precio;
+std::cout <<"Ingrese el precio del vehiculo\n";
+std::cin>> precio;
 
-                  registrarVehiculo(nroSerie,porcentaje,precio);
-            }
-            else if(comando == 3)
-            {
-              
-                std::string cedula;
-                std::cout << "Ingrese Cedula\n";
-                std::cin >> cedula;
-                Usuario* user = obtenerUsuarioPorCi(cedula);
-                std::cout << "Ingrese la fecha separada por espacios dd/mm/aaaa\n";
-                int dia, mes, anio, duracion, distancia;
-                std::cin >> dia >> mes >> anio;
-                std::cout << "Ingrese duracion viaje\n";
-                std::cin >> duracion;
-                std::cout << "Ingrese distancia viaje\n";
-                std::cin >> distancia;
-                user->ingresarViaje(new Viaje(DtFecha(dia,mes,anio),duracion,distancia));
-               
-                
+if(precio<0)
+{
+throw std::invalid_argument("Precio incorrecto");
+}
+registrarVehiculo(nroSerie,porcentaje,precio);
+}
+if(comando.compare("3") == 0)
+{
+int duracion, distancia;
+int dia, mes, anio;
+obtenerFechaDelSitema(dia, mes, anio);
+std::string cedula;
+std::cout << "Ingrese Cedula\n";
+std::cin >> cedula;
+Usuario* user = obtenerUsuarioPorCi(cedula);
+std::cout << "Ingrese duracion viaje\n";
+std::cin >> duracion;
+std::cout << "Ingrese distancia viaje\n";
+std::cin >> distancia;
+user->ingresarViaje(new Viaje(DtFecha(dia,mes,anio),duracion,distancia));
+//std::cout << "Duracion del viaje:" <<user->getViajes()[0]->getDuracion() << std::endl;
 
-            }
-            else if(comando == 4)
-            {
-                std::string ci;
-                std::cout <<"Ingrece cedula\n";
-                std::cin >> ci;
+}
+if(comando.compare("4") == 0)
+{
+std::string ci;
+std::cout <<"Ingrece cedula\n";
+std::cin >> ci;
 
-                Usuario *user = obtenerUsuarioPorCi(ci); 
-                
-                int cantViajes =  user->getCantViajes();
-                std::cout <<" Ingrese la fecha desde la que quiere mostrar los viajes separada por espacios dd/mm/aaaa\n";
-                int dia,mes,anio;
-                std::cin >> dia >> mes >> anio;
-                
-                    DtViaje **retorno = verViajesAntesDeFecha(DtFecha(dia,mes,anio),ci,cantViajes);
-                
-                
-                 int i=0;
-                while(retorno[i]!=NULL){
-                    std::cout << "Informacion del viaje" << std::endl;
-                    std::cout << retorno[i] << std::endl;
-                    i++;
-                }
-                
-            }
+Usuario *user = obtenerUsuarioPorCi(ci);
 
-            else if(comando == 5)
-            {
-                std::string ci;
-                std::cout <<"Ingrece cedula\n";
-                std::cin >> ci;
-                Usuario* user=obtenerUsuarioPorCi(ci);
+int cantViajes =  user->getCantViajes();
+std::cout <<" Ingrese la fecha desde la que quiere mostrar los viajes separada por espacios dd/mm/aaaa\n";
+int dia,mes,anio;
+std::cin >> dia >> mes >> anio;
 
-                std::cout <<" Ingrese la fecha en la que desea eliminar por espacios dd/mm/aaaa\n";
-                int dia,mes,anio;
-                std::cin >> dia >> mes >> anio;
-                 
-                obtenerViajes(ci, DtFecha(dia,mes,anio));
-            }
+DtViaje **retorno = verViajesAntesDeFecha(DtFecha(dia,mes,anio),ci,cantViajes);
+int i=0;
+while(retorno[i]!=NULL){
+std::cout << "Informacion del viaje" << std::endl;
+std::cout << retorno[i] << std::endl;
+i++;
+}
+}
 
-            else if(comando == 6)
-            {
-                int nroSerie;
-                float porcentajeBateria;
-                std::cout << "Ingrese  el porcentaje de bateria de su vehiculo" << std::endl;
-                std::cin >> porcentajeBateria;
-                std::cout << "Ingrese el numero de serie de su vehiculo"<<std::endl;
-                std::cin >> nroSerie;
-                cambiarBateriaVehiculo(nroSerie, porcentajeBateria);
-            }
+if(comando.compare("5") == 0)
+{
+std::string ci;
+std::cout <<"Ingrece cedula\n";
+std::cin >> ci;
+//Usuario* user=obtenerUsuarioPorCi(ci);
 
-            else if(comando == 7){
+std::cout <<" Ingrese la fecha en la que desea eliminar por espacios dd/mm/aaaa\n";
+int dia,mes,anio;
+std::cin >> dia >> mes >> anio;
 
-                break;
-            }
+obtenerViajes(ci, DtFecha(dia,mes,anio));
+}
 
-            else if(comando == 0)
-            {
-                break;
-            }
-        }
-        catch (std::invalid_argument &ia)
-        {
-            std::cout << "Error: " << ia.what() << endl;
-        }
-    }
+if(comando.compare("6") == 0)
+{
+int nroSerie;
+float porcentajeBateria;
+std::cout << "Ingrese  el porcentaje de bateria de su vehiculo" << std::endl;
+std::cin >> porcentajeBateria;
+std::cout << "Ingrese el numero de serie de su vehiculo"<<std::endl;
+std::cin >> nroSerie;
+cambiarBateriaVehiculo(nroSerie, porcentajeBateria);
+}
 
-    return 0;
+if(comando.compare("0") == 0)
+{
+flag = false;
+}
+}
+return 0;
 }
 //-----------------------------------------------------------------------------------
 void mostrarMenu(){
@@ -192,7 +166,6 @@ void mostrarMenu(){
 //-------------------------------------------------------------------------------------
 void registrarUsuario(std::string cedula, std::string nombre){
 
-  
     if (cantidadUsuarios == MAX_USUARIOS){
         throw std::invalid_argument("No se pueden agregar mas usuarios");
     }
@@ -265,7 +238,6 @@ Vehiculo *obtenerVehiculoPorSerie(int nroSerie)
 //--------------------------------------------------------------------------------------
 
 void obtenerFechaDelSitema(int &dia, int &mes, int &anio){
-
     std::time_t t = std::time(0);   // get time now
     std::tm* now = std::localtime(&t);
     anio=(now->tm_year + 1900); 
@@ -277,24 +249,16 @@ void obtenerFechaDelSitema(int &dia, int &mes, int &anio){
 
 void obtenerViajes(std::string ci, DtFecha fecha)
 {
-
    Usuario* user=obtenerUsuarioPorCi(ci);
-
    int cantidad = user->getCantViajes();
-
     for (int i=0; i < cantidad ; i++)
     {
-      
-        Viaje* v = user->getViaje(0);
+              Viaje* v = user->getViaje(0);
                if((user->getViaje(i)->getFechaViaje()==fecha))
         {
-
           cout<< "NO_IMPLEMENTADO"<<endl;
           //.~Viaje();
-
         }
-    
-
     } 
 }
 
@@ -303,37 +267,25 @@ DtViaje** verViajesAntesDeFecha(const DtFecha& fecha,std::string cedula, int& ca
 {
     DtFecha f = fecha;
     Usuario *user = obtenerUsuarioPorCi(cedula);
-    
     if (user != NULL)
     {
         DtViaje **retorno = new DtViaje *[cantViajes];
-
         for (int i = 0; i < cantViajes && i < user->getCantViajes(); i++)
         {
-            
             DtFecha dtfecha_user = user->getViaje(i)->getFechaViaje();
-
             if (dtfecha_user < fecha)
             {
-
-                retorno[i] = new DtViaje(10, user->getViaje(i)->getFechaViaje(),user->getViaje(i)->getDuracion(), user->getViaje(i)->getDistancia());
-
-
-                
+                retorno[i] = new DtViaje(10, user->getViaje(i)->getFechaViaje(),user->getViaje(i)->getDuracion(), user->getViaje(i)->getDistancia());               
             }
         }
-
         return retorno;
     }
     else
     {
-
         throw std::invalid_argument("Socio no existe");
     }
     return NULL;
 }
-
-
 //-------------------------------------------------------------------------------------
 void cambiarBateriaVehiculo(int nroSerie, float porcentajeBateria)
 {
@@ -349,7 +301,3 @@ void cambiarBateriaVehiculo(int nroSerie, float porcentajeBateria)
     Vehiculo *vehiculosModificables = obtenerVehiculoPorSerie(nroSerie);
     vehiculosModificables->setPorcentajeBateria(porcentajeBateria);
 }
-//-------------------------------------------------------------------------------------
-
-//-------------------------------------------------------------------------------------
-//DtViaje** verViajesAntesDeFecha(const DtFecha& fecha, string ci, int& cantViajes)
